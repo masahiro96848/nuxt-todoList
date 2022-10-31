@@ -13,7 +13,13 @@
             <Button @click="addTask">Add</Button>
         </div>
 
-        <div class="tasks"></div>
+        <div class="tasks">
+            <Task
+                v-for="(task, i) in $store.state.tasks"
+                :key="i"
+                :task="task"
+            />
+        </div>
     </main>
 </template>
 
